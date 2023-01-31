@@ -32,10 +32,10 @@ export default function Predict() {
                 let resJson = await res.json()
                 console.log(resJson)
                 //if(res.status === 200 || 400){
-                    setValues({
-                        magnitude: 0,
-                        velocity: 0
-                    });
+                    // setValues({
+                    //     magnitude: 0,
+                    //     velocity: 0
+                    // });
                     console.log("fetched Successfully")
                 //}
                 //else{
