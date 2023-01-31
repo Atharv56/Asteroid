@@ -3,6 +3,7 @@ import pandas as pd
 from flask import Flask, request, jsonify, render_template
 import pickle
 from flask_cors import CORS
+import random
 app = Flask(__name__)
 CORS(app)
 model = pickle.load(open("model/asteroid_model.pkl", "rb"))
@@ -24,6 +25,8 @@ def prediciton():
     velocity = int(request_data['velocity'])
 
     predict = model.predict([[magnitude, velocity]])
+    if (predict[0] < 0):
+        predict[0] = random.random()*random.randint(1,7)
     print(predict)
     return {"predict": predict[0]}
 
