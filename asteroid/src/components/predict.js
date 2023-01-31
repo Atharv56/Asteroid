@@ -22,8 +22,8 @@ export default function Predict() {
                 </Form>
             </Card.Body>
             <Card.Body>
-                <h2 className="text-center mb-4">Predicted diameter is</h2>
-                <h5>{predict}</h5>
+                <h2 className="text-center mb-4">Predicted diameter is:</h2>
+                <h5 className="text-center mb-4">hello</h5>
             </Card.Body>
         </Card>
         </div>
